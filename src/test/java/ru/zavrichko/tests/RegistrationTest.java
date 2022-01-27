@@ -88,5 +88,7 @@ public class RegistrationTest extends TestBase {
             $(".table-responsive").shouldHave(text("Sports, Reading, Music"));
             $(".table-responsive").shouldHave(text("NCR Gurgaon"));
         });
+
     }
+
 }
