@@ -19,7 +19,9 @@ public class TestBase {
         Configuration.browserSize = "1920x1080";
         String login = System.getProperty("login");
         String password = System.getProperty("password");
-        Configuration.remote = "https://" + login + ":" + password + "@selenoid.autotests.cloud/wd/hub";
+        String url = System.getProperty("url");
+        String remoteUrl = "https://" + login + ":" + password + "@" + url;
+        Configuration.remote = remoteUrl;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
